@@ -75,6 +75,13 @@ Secara default, server akan berjalan di [localhost:8080](https://localhost:8080)
 
 pull requests diperbolehkan. Untuk perubahan besar, mohon untuk membuat issue baru untuk mendiskusi apa yang mau diubah.
 
+## Note Projek
+
+Projek ini dibuat untuk tugas akhir uji kompetensi smk 2 kota bandung tahun pelajaran 2023-2024 oleh:
+- **Nama :** Muhammad Irsyad Fathurrahman
+- **Kelas :** 12 rpl 1
+- **No Absen :** 24
+
 ## Lisensi
 
 MIT License
