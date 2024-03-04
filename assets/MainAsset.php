@@ -20,7 +20,6 @@ class MainAsset extends AssetBundle
         'gentelella/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css',
         'gentelella/pnotify/dist/pnotify.css',
         'gentelella/pnotify/dist/pnotify.buttons.css',
-        'gentelella/pnotify/dist/pnotify.unblock.css',
     ];
     public $js = [
         'gentelella/bootstrap/dist/js/bootstrap.bundle.min.js',
@@ -31,7 +30,6 @@ class MainAsset extends AssetBundle
         'gentelella/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
         'gentelella/pnotify/dist/pnotify.js',
         'gentelella/pnotify/dist/pnotify.buttons.js',
-        'gentelella/pnotify/dist/pnotify-notification.js',
     ];
     public $depends = [
         'yii\web\YiiAsset'

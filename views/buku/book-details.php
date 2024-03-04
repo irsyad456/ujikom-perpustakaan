@@ -118,7 +118,7 @@ $this->params['breadcrumbs'][] = $book->judul
                                             <?php $form = ActiveForm::begin(['id' => 'rating-form']) ?>
 
                                             <?= $form->field($rating, 'ulasan')->textarea() ?>
-                                            <?= $form->field($rating, 'rating')->textInput() ?>
+                                            <?= $form->field($rating, 'rating')->textInput(['type' => 'number', 'min' => 1, 'max' => 5]) ?>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

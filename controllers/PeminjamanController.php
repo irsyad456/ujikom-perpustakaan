@@ -147,6 +147,14 @@ class PeminjamanController extends \app\controllers\BaseControllers
         ]);
     }
 
+    public function actionGenerateLaporan($id)
+    {
+        $peminjaman = Peminjaman::find()->where(['id' => $id])
+            ->with('buku', 'user', 'buku.kategoriBukuRelasis.kategoribuku')
+            ->one();
+        return $this->render('laporan', ['data' => $peminjaman]);
+    }
+
     /**
      * Finds the Peminjaman model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

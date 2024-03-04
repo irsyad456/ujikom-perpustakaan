@@ -147,8 +147,17 @@ class BukuController extends \app\controllers\BaseControllers
 
     public function actionBookList()
     {
+        $query = Buku::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 10,
+            'totalCount' => $query->count()
+        ]);
+
+        $book_limit = $query->offset($pagination->offset)->limit($pagination->limit)->all();
         return $this->render('book-list', [
-            'books' => Buku::find()->all()
+            'books' => $query->all(),
+            'book_limit' => $book_limit,
+            'pagination' => $pagination
         ]);
     }
 
@@ -172,7 +181,7 @@ class BukuController extends \app\controllers\BaseControllers
 
         $query = UlasanBuku::find()->where(['buku_id' => $id])->orderBy('created_at DESC');
         $pagination = new Pagination([
-            'defaultPageSize' => 5,
+            'defaultPageSize' => 1,
             'totalCount' => $query->count()
         ]);
         $book_rating = $query->offset($pagination->offset)->limit($pagination->limit)->all();

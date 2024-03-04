@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\config\functions;
 use app\models\KoleksiPribadi;
 use app\models\KoleksiPribadiSearch;
 use Yii;
@@ -71,9 +72,9 @@ class KoleksiPribadiController extends \app\controllers\BaseControllers
     public function actionCreate($id)
     {
         $koleksi = KoleksiPribadi::find()
-            ->where(['user_id' => Yii::$app->user->id, 'buku_id' => $id]);
+            ->where(['user_id' => Yii::$app->user->id, 'buku_id' => $id])->one();
 
-        if ($koleksi) {
+        if ($koleksi !== null) {
             Yii::$app->session->setFlash('warning', 'You Already Add This Book To Collection');
             return $this->redirect(urldecode(Yii::$app->request->referrer));
         }

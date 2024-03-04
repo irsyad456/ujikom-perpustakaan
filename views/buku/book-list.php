@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\widgets\LinkPager;
 
 $this->title = 'Book List';
 $this->params['breadcrumbs'][] = $this->title;
@@ -76,6 +77,19 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                     </div>
                 <?php endforeach ?>
+                <div class="x_panel">
+                    <div class="col-sm-12">
+                        <div class="dataTables_paginate paging_simple_numbers pull-right" id="example_paginate">
+                            <?= LinkPager::widget([
+                                'pagination' => $pagination,
+                                'options' => ['class' => 'pagination'],
+                                'prevPageLabel' => '&laquo;',
+                                'nextPageLabel' => '&raquo;',
+                                'maxButtonCount' => 5, // Adjust as needed
+                            ]) ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

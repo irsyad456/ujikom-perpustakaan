@@ -50,6 +50,16 @@ $this->params['breadcrumbs'][] = $this->title;
                             },
                         ],
                     ],
+                    [
+                        'header' => 'Generate',
+                        'class' => ActionColumn::class,
+                        'template' => '{generate}',
+                        'buttons' => [
+                            'generate' => function ($action, Peminjaman $model) {
+                                return Html::a('Generate Laporan', ['generate-laporan', 'id' => $model->id], ['class' => 'btn btn-sm btn-info']);
+                            }
+                        ]
+                    ]
 
                 ],
             ]); ?>
