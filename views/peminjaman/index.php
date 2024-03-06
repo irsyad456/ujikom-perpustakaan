@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\PeminjamanSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Peminjaman';
+$this->title = 'Book borrowing';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="peminjaman-index">
@@ -27,16 +27,31 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     'id',
                     [
-                        'value' => 'user.username',
+                        'value' => function ($model) {
+                            return Html::a($model->user->username, ['user/view', 'id' => $model->user_id]);
+                        },
+                        'format' => 'raw',
                         'attribute' => 'user_id'
                     ],
                     [
-                        'value' => 'buku.judul',
+                        'value' => function ($model) {
+                            return Html::a($model->buku->judul, ['buku/view', 'id' => $model->buku_id]);
+                        },
+                        'format' => 'raw',
                         'attribute' => 'buku_id'
                     ],
                     'tanggal_peminjaman',
                     'tanggal_pengembalian',
-                    'status_peminjaman',
+                    [
+                        'value' => 'status_peminjaman',
+                        'attribute' => 'status_peminjaman',
+                        'filter' => array(
+                            'Dipinjam' => 'Dipinjam', 'Diperpanjang' => 'Diperpanjang',
+                            'Dikembalikan' => 'Dikembalikan', 'terlambat' => 'Terlambat',
+                            'Hilang' => 'Hilang', 'Rusak' => 'Rusak'
+                        ),
+                        'contentOptions' => ['style' => 'width:170px']
+                    ],
                     [
                         'class' => ActionColumn::class,
                         'urlCreator' => function ($action, Peminjaman $model, $key, $index, $column) {
@@ -56,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'template' => '{generate}',
                         'buttons' => [
                             'generate' => function ($action, Peminjaman $model) {
-                                return Html::a('Generate Laporan', ['generate-laporan', 'id' => $model->id], ['class' => 'btn btn-sm btn-info']);
+                                return Html::a('Generate Report', ['generate-laporan', 'id' => $model->id], ['class' => 'btn btn-sm btn-info']);
                             }
                         ]
                     ]

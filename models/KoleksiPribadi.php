@@ -44,7 +44,7 @@ class KoleksiPribadi extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'user_id' => 'User ID',
-            'buku_id' => 'Buku ID',
+            'buku_id' => 'Book ID',
         ];
     }
 

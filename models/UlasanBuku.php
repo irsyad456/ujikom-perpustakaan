@@ -47,8 +47,8 @@ class UlasanBuku extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'user_id' => 'User',
-            'buku_id' => 'Buku',
-            'ulasan' => 'Ulasan',
+            'buku_id' => 'Book',
+            'ulasan' => 'Review',
             'rating' => 'Rating',
         ];
     }

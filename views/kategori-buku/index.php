@@ -10,14 +10,14 @@ use yii\grid\GridView;
 /** @var app\models\KategoriBukuSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Kategori Buku';
+$this->title = 'Book category';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="kategori-buku-index">
     <div class="col-md-12 col-sm-12">
 
         <p>
-            <?= Html::a('Create Kategori Buku', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Create New Category', ['create'], ['class' => 'btn btn-success']) ?>
         </p>
 
         <?php // echo $this->render('_search', ['model' => $searchModel]); 

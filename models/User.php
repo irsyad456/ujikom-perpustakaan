@@ -61,7 +61,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             'email' => 'Email',
             'username' => 'Username',
             'password_hash' => 'Password',
-            'alamat' => 'Alamat',
+            'alamat' => 'Address',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];

@@ -50,10 +50,10 @@ class Peminjaman extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'user_id' => 'User',
-            'buku_id' => 'Buku',
-            'tanggal_peminjaman' => 'Tanggal Peminjaman',
-            'tanggal_pengembalian' => 'Tanggal Pengembalian',
-            'status_peminjaman' => 'Status Peminjaman',
+            'buku_id' => 'Book',
+            'tanggal_peminjaman' => 'Borrow date',
+            'tanggal_pengembalian' => 'Return date',
+            'status_peminjaman' => 'Borrow status',
         ];
     }
 

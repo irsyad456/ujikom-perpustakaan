@@ -40,7 +40,7 @@ class KategoriBuku extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'namaKategori' => 'Nama Kategori',
+            'namaKategori' => 'Category name',
         ];
     }
 

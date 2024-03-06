@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var app\models\Peminjaman $model */
 
-$this->title = 'Detail Peminjaman: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Peminjaman', 'url' => ['index']];
+$this->title = 'Borrowing details: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Book borrowing', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

@@ -2,8 +2,8 @@
 
 use app\config\functions;
 
-$this->title = 'Laporan Peminjaman';
-$this->params['breadcrumbs'][] = ['url' => ['index'], 'label' => 'Peminjaman'];
+$this->title = 'Borrow report';
+$this->params['breadcrumbs'][] = ['url' => ['index'], 'label' => 'Book borrowing'];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -39,8 +39,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="row">
                     <div class="invoice-header">
                         <h1>
-                            <i class="fa fa-book"></i> Laporan Peminjaman Buku
-                            <small class="pull-right">Tanggal: <?= date('Y/m/d') ?></small>
+                            <i class="fa fa-book"></i> Borrow report
+                            <small class="pull-right">Date: <?= date('Y/m/d') ?></small>
                         </h1>
                     </div>
                 </div>
@@ -62,13 +62,13 @@ $this->params['breadcrumbs'][] = $this->title;
                         </address>
                     </div>
                     <div class="col-sm-4 invoice-col">
-                        <b>Laporan #<?= random_int(100000, 999999) ?></b>
+                        <b>Report #<?= random_int(100000, 999999) ?></b>
                         <br>
                         <b>Order ID:</b> <?= functions::generateRandomString(6) ?>
                         <br>
-                        <b>Tanggal Peminjaman: <?= $data->tanggal_peminjaman ?></b>
+                        <b>Borrow date: <?= $data->tanggal_peminjaman ?></b>
                         <br>
-                        <b>Tanggal Pengembalian: <?= $data->tanggal_pengembalian ?></b>
+                        <b>Return date: <?= $data->tanggal_pengembalian ?></b>
                     </div>
                 </div>
                 <div class="row">
@@ -76,12 +76,12 @@ $this->params['breadcrumbs'][] = $this->title;
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Judul Buku</th>
-                                    <th>Kategori Buku</th>
-                                    <th>Penulis</th>
-                                    <th>Penerbit</th>
-                                    <th>Tahun Terbit</th>
-                                    <th>Status Peminjaman</th>
+                                    <th>Book title</th>
+                                    <th>Book category</th>
+                                    <th>Writer</th>
+                                    <th>Publisher</th>
+                                    <th>Release date</th>
+                                    <th>Borrow status</th>
                                 </tr>
                             </thead>
                             <tbody>

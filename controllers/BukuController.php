@@ -181,7 +181,7 @@ class BukuController extends \app\controllers\BaseControllers
 
         $query = UlasanBuku::find()->where(['buku_id' => $id])->orderBy('created_at DESC');
         $pagination = new Pagination([
-            'defaultPageSize' => 1,
+            'defaultPageSize' => 5,
             'totalCount' => $query->count()
         ]);
         $book_rating = $query->offset($pagination->offset)->limit($pagination->limit)->all();

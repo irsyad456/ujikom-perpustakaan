@@ -47,10 +47,10 @@ class Buku extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'judul' => 'Judul',
-            'penulis' => 'Penulis',
-            'penerbit' => 'Penerbit',
-            'tahunTerbit' => 'Tahun Terbit',
+            'judul' => 'Title',
+            'penulis' => 'Writer',
+            'penerbit' => 'Publisher',
+            'tahunTerbit' => 'Release date',
         ];
     }
 

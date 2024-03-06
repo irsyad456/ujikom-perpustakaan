@@ -13,9 +13,9 @@ $this->params['breadcrumbs'][] = $this->title;
                             <table id="datatable-fixed-header" class="table table-striped table-bordered" style="width:100%;">
                                 <thead>
                                     <tr>
-                                        <th>Buku</th>
-                                        <th>Tanggal Peminjaman</th>
-                                        <th>Tanggal Pengembalian</th>
+                                        <th>Books</th>
+                                        <th>Borrow date</th>
+                                        <th>Return date</th>
                                         <th>Status</th>
                                     </tr>
                                 </thead>

@@ -44,8 +44,8 @@ class KategoriBukuRelasi extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'buku_id' => 'Id Buku',
-            'kategoribuku_id' => 'kategori Buku',
+            'buku_id' => 'Book id',
+            'kategoribuku_id' => 'Book category',
         ];
     }
 

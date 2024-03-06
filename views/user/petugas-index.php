@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\PetugasSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Petugas';
+$this->title = 'Officer';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="petugas-index">
@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ?>
 
         <p>
-            <?= Html::a('Create Petugas', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Create Officer', ['create'], ['class' => 'btn btn-success']) ?>
         </p>
 
         <div class="x_panel">

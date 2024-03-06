@@ -38,10 +38,10 @@ use yii\helpers\Url;
                             <ul class="nav child_menu">
                                 <li><?= Html::a('Books', ['buku/index']) ?></li>
                                 <li><?= Html::a('Book Category', ['kategori-buku/index']) ?></li>
-                                <li><?= Html::a('Peminjaman', ['peminjaman/index']) ?></li>
+                                <li><?= Html::a('Book borrowing', ['peminjaman/index']) ?></li>
                                 <li><?= Html::a('User', ['user/index']) ?></li>
                                 <?php if (Yii::$app->user->can('Administrator'))
-                                    echo '<li>' . Html::a('Petugas', ['user/petugas-index']) . '</li>'
+                                    echo '<li>' . Html::a('Officer', ['user/petugas-index']) . '</li>'
                                 ?>
                             </ul>
                         </li>
