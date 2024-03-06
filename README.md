@@ -19,7 +19,7 @@ Website perpustakaan online adalah projek aplikasi berbasis web dengan fitur :
 
 ## Installasi
 
-> Sebelum menginstall, pastikan sudah menginstall xampp
+> Sebelum menginstall, pastikan sudah menginstall [xampp](https://www.apachefriends.org/download.html), dan [composer](https://getcomposer.org/download/)
 
 ### Download melalui ZIP
 
@@ -45,14 +45,13 @@ Website perpustakaan online adalah projek aplikasi berbasis web dengan fitur :
 - Ketikkan
 
 ```bash
-php init
+// jalani fungsi dibawah secara terpisah
+composer install
 ```
-
-- dan pilih `[0]development`
 
 ### Database
 
-- Buat Database baru `yii2advanced` di phpMyAdmin, atau buka file `config/db.php` lalu ganti dbname di line 5 dengan database yang dimiliki.
+- Buat Database baru `ujikom` di phpMyAdmin, atau buka file `config/db.php` lalu ganti dbname di line 5 dengan database yang dimiliki.
 - Jalani
 
 ```bash
