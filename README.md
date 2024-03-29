@@ -45,8 +45,8 @@ Website perpustakaan online adalah projek aplikasi berbasis web dengan fitur :
 - Ketikkan
 
 ```bash
-// jalani fungsi dibawah secara terpisah
-composer install
+// note* = penginstallan bisa cukup lama tergantung beberapa faktor
+composer update
 ```
 
 ### Database
