@@ -140,8 +140,16 @@ class BukuController extends \app\controllers\BaseControllers
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $kategoriRelasi = KategoriBukuRelasi::find()->where(['buku_id' => $model->id])->one();
+        if (!$model || !$kategoriRelasi) {
+            Yii::$app->session->setFlash('error', 'Book / relation not found');
+            return $this->redirect(['index'], 404);
+        }
+        $kategoriRelasi->delete();
+        $model->delete();
 
+        Yii::$app->session->setFlash('success', 'Book deleted');
         return $this->redirect(['index']);
     }
 

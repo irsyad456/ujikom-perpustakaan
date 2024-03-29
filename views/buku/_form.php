@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
 <div class="item form-group">
     <label class="col-form-label col-md-3 col-sm-3 label-align" for="">
-        Judul
+        Title
     </label>
     <div class="col-md-4 col-sm-4">
         <?= $form->field($model, 'judul')->textInput(['maxlength' => true])->label(false) ?>
@@ -23,7 +23,7 @@ use yii\widgets\ActiveForm;
 
 <div class="item form-group">
     <label class="col-form-label col-md-3 col-sm-3 label-align" for="">
-        Kategori Buku
+        Book category
     </label>
     <div class="col-md-4 col-sm-4">
         <?= $form->field($relasi, 'kategoribuku_id')->dropDownList(
@@ -39,7 +39,7 @@ use yii\widgets\ActiveForm;
 
 <div class="item form-group">
     <label class="col-form-label col-md-3 col-sm-3 label-align" for="">
-        Penulis
+        Writer
     </label>
     <div class="col-md-4 col-sm-4">
         <?= $form->field($model, 'penulis')->textInput(['maxlength' => true])->label(false) ?>
@@ -48,7 +48,7 @@ use yii\widgets\ActiveForm;
 
 <div class="item form-group">
     <label class="col-form-label col-md-3 col-sm-3 label-align" for="">
-        Penerbit
+        Publisher
     </label>
     <div class="col-md-4 col-sm-4">
         <?= $form->field($model, 'penerbit')->textInput(['maxlength' => true])->label(false) ?>
@@ -57,7 +57,7 @@ use yii\widgets\ActiveForm;
 
 <div class="item form-group">
     <label class="col-form-label col-md-3 col-sm-3 label-align" for="">
-        Tahun Terbit
+        Release date
     </label>
     <div class="col-md-4 col-sm-4">
         <?= $form->field($model, 'tahunTerbit')->widget(
