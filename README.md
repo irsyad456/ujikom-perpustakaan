@@ -17,6 +17,9 @@ Website perpustakaan online adalah projek aplikasi berbasis web dengan fitur :
 - Membuat Koleksi Pribadi Buku
 - Membuat Ulasan Buku
 
+***Note: Dikarenakan projek ini diperuntukkan penilaian ujikom, mohon untuk tidak
+         menggunakan keseluruhan projek untuk publik dikarenakan banyaknya bug dan masalah keamanan**
+
 ## Installasi
 
 > Sebelum menginstall, pastikan sudah menginstall [xampp](https://www.apachefriends.org/download.html), dan [composer](https://getcomposer.org/download/)
